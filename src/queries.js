@@ -26,7 +26,7 @@ const getFirstTask = (request, response) => {
 }
 
 const getSecondTask = (request, response) => {
-    pool.query('SELECT * FROM task_1_2', (error, results) => {
+    pool.query('SELECT * FROM task_1_2 ORDER BY age, sex', (error, results) => {
         if (error) {
             throw error
         }
